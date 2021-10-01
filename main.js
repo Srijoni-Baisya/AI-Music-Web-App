@@ -10,7 +10,7 @@ function preload(){
 
 function setup(){
     //create the canvas
-    canvas = createCanvas(480,480);
+    canvas = createCanvas(400,400);
     canvas.center();
 
     //access the webcam
@@ -22,5 +22,5 @@ function setup(){
 
 function draw(){
     //place the webcam live view on the canvas
-    image(video,0,0,480,480);
+    image(video,0,0,400,400);
 }
