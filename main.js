@@ -4,8 +4,8 @@ music_2 = "";
 
 //define preload function to load the 2 songs
 function preload(){
-    music_1 = loadSound("Jamaica Farewell.mp3");
-    music_2 = loadSound("Five Hundred Miles.mp3");
+    music_1 = loadSound("music1.mp3");
+    music_2 = loadSound("music_2.mp3");
 }
 
 function setup(){
