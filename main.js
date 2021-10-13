@@ -12,8 +12,14 @@ rightWristY = 0;
 // 1. var to store score of left wrist
 score_left = 0;
 
+// var to store the score of right wrist
+score_right = 0;
+
 // 2. var to hold status of song files
 song_status = "";
+
+// var to store ststus of song 2
+song2_status = "";
 
 //define preload function to load the 2 songs
 function preload(){
@@ -74,8 +80,34 @@ function draw(){
       
         // update the name of the song in the heading displayed on the webpage
         document.getElementById("song_name").innerHTML = " Name of the Song : Five Hundred Miles";
+
+        //update the name of the singer
+        document.getElementById("singer_name").innerHTML = "Singer : Justin Timberlake";
     }
 
+    }
+
+    //get the status of song
+    song2_status = music_2.isPlaying();
+
+    if(score_right > 0.2){
+        //draw a circle on right wrist
+        circle(rightWristX,rightWristY,20);
+
+        //stop song 1
+        music_1.stop();
+
+        //check if song 2 is stopped
+        if(song2_status == false){
+            //play song 2
+            music_2.play();
+
+            //update the heading tag with the name of song 2 
+            document.getElementById("song_name").innerHTML = "Name of the Song : Jamaica Farewell";
+
+            //update the name of the singer
+            document.getElementById("singer_name").innerHTML = "Singer : Harry Belafonte";
+        }
     }
 
 }
@@ -97,4 +129,8 @@ function gotPoses(results){
     // 3. fetch score of left wrist
     score_left = results[0].pose.keypoints[9].score;
     console.log("Score of Left Wrist : " + score_left);
+
+    //fetch the score of right wrist
+    score_right = results[0].pose.keypoints[10].score;
+    console.log("Score of Right Wrist : " + score_right);
 }
