@@ -22,6 +22,14 @@
     box-shadow: 5px 5px 10px aqua;
 }
 
+#singer_name{
+    font-size: 23px;
+    color: white;
+    border:5px double black;
+    box-shadow: 5px 5px 10px aqua;
+    background-color: purple;
+}
+
 body{
     background-size: cover;
     font-family: 'Playfair Display', serif;
@@ -32,7 +40,7 @@ canvas{
     border-radius: 20px;
     box-shadow: 5px 5px 10px aqua;
     margin: 20px;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .copy_right_footer{
